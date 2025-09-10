@@ -38,9 +38,9 @@ async function startServer() {
   app.use('/GetQRWhatsapp', getQRWhatsappRoutes(sock)) // endpoint QR dinámico
 
   // Iniciar servidor
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 Servidor API corriendo en http://0.0.0.0:${PORT}`)
-    console.log(`📄 Documentación Swagger: http://0.0.0.0:${PORT}/api-docs`)
+  app.listen(PORT, () => {
+    console.log(`🚀 Servidor API corriendo en http://34.44.122.144:${PORT}`)
+    console.log(`📄 Documentación Swagger: http://34.44.122.144:${PORT}/api-docs`)
   })
 }
 
