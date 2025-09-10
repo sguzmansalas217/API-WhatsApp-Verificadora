@@ -10,7 +10,7 @@ export function setupSwagger(app, port) {
         version: '1.0.0',
         description: 'API para enviar mensajes y recibir mensajes de WhatsApp usando Baileys',
       },
-      servers: [{ url: `http://localhost:${port}` }],
+      servers: [{ url: `http://0.0.0.0:${port}` }],
     },
     apis: ['./routes/*.js'], // Swagger lee todos los endpoints en routes
   }

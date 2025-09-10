@@ -25,7 +25,7 @@ export async function connectToWhatsApp() {
     // 👉 Guardar QR recibido
     if (qr) {
       lastQR = qr
-      console.log('📲 Escanea el QR en http://localhost:3000/qr')
+      console.log('📲 Escanea el QR en http://0.0.0.0:3000/qr')
     }
 
     if (connection === 'close') {
@@ -50,7 +50,10 @@ export async function connectToWhatsApp() {
 
 // Función para devolver el QR como imagen
 export async function getQRImage() {
-  if (!lastQR) return null
+  if (!lastQR) {
+    console.log('⚠️ No hay QR disponible aún')
+    return null
+  }
   return await QRCode.toDataURL(lastQR)
 }
 

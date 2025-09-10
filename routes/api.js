@@ -75,7 +75,7 @@ export default function createRoutes(sock) {
     if (!sock || !sock.user) {
       return res.status(401).json({
         error: 'WhatsApp no está logueado',
-        qr_url: 'http://localhost:3000/GetQRWhatsapp/qr' // endpoint para obtener QR
+        qr_url: 'http://0.0.0.0:3000/GetQRWhatsapp/qr' // endpoint para obtener QR
       })
     }
 
